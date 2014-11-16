@@ -1,6 +1,6 @@
 <?php
 include_once('conn.php');
-//引入树节点类
+//引入树节点类treenode_class
 include_once('treenode_class.php');
 $article_id=$_GET['article_id'];
 $db=connect();
