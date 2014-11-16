@@ -1,5 +1,5 @@
 <?php
-/*输出分类信息*/
+//输出分类列表
 include('conn.php');
 function cate_list(){
 $db=connect();
