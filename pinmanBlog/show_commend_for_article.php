@@ -1,6 +1,6 @@
 <?php
 include_once('conn.php');
-//引入树节点类
+//寮曞叆鏍戣妭鐐圭被
 include_once('treenode_class.php');
 
 function show_commend_for_article($db,$postid){
