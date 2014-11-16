@@ -42,9 +42,8 @@
 	    <!--文章列表-->
 	    <?php
 		include_once('show_article.php');
-		$db=connect();
         $postid=$_GET['postid'];
-		show_article($db,$postid);
+		show_article($postid);
 		?>
         <a href="#" style="background-color:white;border-radius:5px;position:absolute;right:10px;top:5px;color:black;padding:5px;">返回</a>		
         <!--评论该篇文章-->
@@ -73,9 +72,8 @@
 	  <div id="commend_area" >
 		 <?php 
 		    include_once('show_commend_for_article.php');
-			$db=connect();
 			$postid=$_GET['postid'];
-            show_commend_for_article($db,$postid);
+            show_commend_for_article($postid);
 		  ?> 
         </div>
 	</div>

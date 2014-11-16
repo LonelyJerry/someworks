@@ -2,8 +2,9 @@
 include_once('conn.php');
 include_once('article_tag.php');
 
-function show_article($db,$postid){
+function show_article($postid){
 $img_address="img/";
+$db=connect();
 $query="select * from header where postid=".$postid."";
 $result=$db->query($query);
 if(!$result){
@@ -18,7 +19,7 @@ echo "<span>日期：".$row['posted']."</span>";
 echo "<span>分类：".$row['cate']."</span>";
 echo "<span style='margin-right:5px;'>标签:</span>";
 echo "<ul>";
-echo article_tag($db,$postid,"li");
+echo article_tag($postid,"li");
 echo "<div class='clearfix'></div>";
 echo "</ul>";
 echo "</div>";

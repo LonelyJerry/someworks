@@ -8,10 +8,11 @@ class treenode{
   public $m_poster;//评论者
   public $m_posted;//评论时间
   public $m_icon;//评论者头像
-  public $m_children;//评论的子评论标记？
-  public $m_body;
-  public $m_childlist;
+  public $m_children;//评论的子评论数
+  public $m_body;//评论内容
+  public $m_childlist;//子评论数组
   public $m_article;//评论所属文章
+  public $m_father;//评论的父评论的评论者名称
   
   public function __construct($postid,$poster,$posted,$icon,
        $children,$body,$article,$father){
@@ -30,7 +31,7 @@ class treenode{
 	
 	if($children>0){
 	  $db=connect();
-	  $query="select * from commend where commend_father =".$postid." order by date ASC";//此处header应该改为commend数据库吧
+	  $query="select * from commend where commend_father =".$postid." order by date ASC";
 	  $result=$db->query($query);
 	  
 	 
@@ -43,6 +44,7 @@ class treenode{
 	  $result2=$db->query($query2);
 	  $row=$result2->fetch_assoc();
 	  $father=$row['name'];
+	  //获得评论的子评论,并将子评论生成treenode类
 	  for($count=0;$r=$result->fetch_assoc();$count++){
 		$this->m_childlist[$count]=new treenode($r['id'],$r['name'],$r['date'],$r['icon'],$r['children'],$r['body'],$article,$father);
 	  }
@@ -55,7 +57,10 @@ class treenode{
 	  echo "<div class='commend'>";
 	  echo "<img class='touxiang' src='".$img_address.$this->m_icon."'/>";
 	  echo "<div class='say'>";
-	  echo "<p class='name'>".$this->m_poster.":</p>";
+	  echo "<p class='name'>".$this->m_poster;
+	  if($this->m_father!=null)
+	  {echo "&nbsp对&nbsp".$this->m_father."评论";}
+	  echo "</p>";
 	  echo "<p>".$this->m_body."</p>";
 	  echo "<a class='commend_for_commend'>评论该评论</a>";
 	  if($this->m_children>0){
@@ -67,6 +72,7 @@ class treenode{
 	  echo "<form method='post' action='add_commend_for_commend.php?commend_id=".$this->m_postid."&article_id=".$this->m_article."'></form>";
 	  echo "</div>";
 	  echo "<div class='commends_for_thiscommend'>";
+	  //对评论的子评论递归调用display()方法
       $num_children=$this->m_children;
 	  for($i=0;$i<$num_children;$i++){
 	    @$this->m_childlist[$i]->display();

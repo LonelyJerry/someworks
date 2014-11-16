@@ -31,7 +31,7 @@ function article_list($db,$cate=null,$tag=null){
 	    echo "<p class='date'>".stripslashes($row['posted'])."</p>";
 	    echo "<div class='tag'>";
 	    echo "<span>±Í«©:</span>";
-	    article_tag($db,$row['postid'],"span");
+	    article_tag($row['postid'],"span");
 	    echo "</div>";
 	    echo "</div>";
         if(($i>0)&&($i%2==0)){
