@@ -6,7 +6,7 @@ $db=connect();
 $query="select commend_father from commend where id=".$id."";
 $result=$db->query($query);
 if(!$result){
-  echo "Ê§°Ü".$db->error;
+  echo "å¤±è´¥".$db->error;
   return false;
   exit;
 }
@@ -16,7 +16,7 @@ $father=$row['commend_father'];
 $query="delete from commend where id=".$id."";
 $result=$db->query($query);
 if(!$result){
-  echo "Ê§°Ü".$db->error;
+  echo "å¤±è´¥".$db->error;
   return false;
   exit;
 }
@@ -26,7 +26,7 @@ $children_num=$result->num_rows;
 $query="update commend set children=".$children_num." where id=".$father."";
 $result=$db->query($query);
 if(!$result){
-  echo "Ê§°Ü".$db->error;
+  echo "å¤±è´¥".$db->error;
   return false;
   exit;
   }
