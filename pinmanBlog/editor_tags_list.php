@@ -13,7 +13,7 @@ function editor_tags_list($db){
 	echo "</a>";
 	echo "</li>";
 	echo "<form name='delete_tag' action='delete_tag.php?tag_id=".$row['tagid'].
-	     "' method='post'><input type='submit' value='É¾³ý'></form>";
+	     "' method='post'><input type='submit' value='åˆ é™¤'></form>";
 	}
 }
 ?>
