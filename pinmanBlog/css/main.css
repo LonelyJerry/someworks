@@ -1,0 +1,85 @@
+*{background-color:;margin:0px;padding:0px;font-family:"Î¢ÈíÑÅºÚ";}
+body{background-color:#ff611c;}
+.clearfix{clear:both;}
+a{text-decoration:none;color:inherit;cursor:pointer;}
+a:hover{text-decoration:underline;color:inherit;}
+
+#container{height:1100px;}
+#sidebar{background-color:#ff611c;color:white;width:20%;height:100%;position:relative;color:black;float:left;}
+#header{background-color:#ff611c;width:80%;height:;margin:5% auto;float:left;}
+#header a:hover{text-decoration:none;}
+#header h2{background-color:#ff611c;color:white;font-size:70px;width:75%;margin:0 auto;text-align:center;}
+#header p{background-color:#ff611c;color:white;position:relative;left:25%;}
+#nav{background-color:#ff611c;color:white;width:100%;margin-top:15%;float:left;}
+#nav ul{background-color:;}
+#nav li{background-color:;padding:10px;list-style:none;border-top:1px solid white;color:;padding-left:20%;}
+#nav li:last-child{border-bottom:1px solid white;}
+#tags{background-color:#ff611c;width:100%;float:left;margin-top:20px;}
+#tags ul{background-color:#ff611c;}
+#tags li{background-color:white;color:#ff611c;float:left;margin:10px;font-size:15px;border-radius:5px;padding:5px;list-style:none;}
+#content{background-color:#c8e2e9;width:80%;min-height:1000px;height:100%;height:100%;float:left;position:relative;}/*#c8e2e9*/
+.juzhong{background-color:;width:95%;height:90%;margin:20px auto;}
+.juzhong h1{background-color:;color:black;font-size:25px;text-align:;}
+.article{background-color:#FFFFFB;width:27%;height:;border:1px solid #BFBFBF;box-shadow:1px 1px 3px #aaaaaa;float:left;margin:10px 20px 30px 10px;text-align:center;position:relative;}
+.article{border-radius:5px;}
+.cover{height:;}
+.article img{max-width:95%;max-height:25%;margin:10px auto;}/*display:inline;*/
+.article .title{background-color:;color:black;font-size:20px;text-align:left;margin-left:10px;}
+.article .description{background-color:;font-size:15px;text-align:left;margin-left:10px;margin-bottom:20px;}
+.article .pingjia{background-color:;text-align:right;padding-right:10px;}
+.article .date{background-color:;bottom:2%;color:gray;text-align:right;padding-right:10px;padding-bottom:10px;}
+.article  span{background-color:;font-size:15px;color:gray;}
+.pager{background-color:;width:500px;margin:0 auto ;}
+.pager li{background-color:#FFFFFB;float:left;list-style:none;border:1px solid #BFBFBF;box-shadow:1px 1px 3px #aaaaaa;font-size:20px;padding:5px;margin-bottom:50px;}
+.page_num{width:20px;text-align:center}
+.tag{width:100%;height:30px;border-top:1px solid #aaaaaa;text-align:left;}
+.tag span{margin-left:10px;}
+
+.article_content{background-color:#FFFFFB;width:75%;margin:2% auto ;padding:20px;}
+.article_content h1{margin-bottom:1%;}
+.article_content img{width:80%;margin-top:3%;margin-bottom:3%;}
+.intro{display:block;}
+.intro span{float:left;margin-bottom:1%;margin-right:50px;}
+
+.article_content li{background-color:#ff611c;color:white;border-radius:5px;padding:5px;display:inline;float:left;margin-right:5px;list-style:none;line-height:15px;}
+.article_content p{line-height:30px;font-size:18px;}
+.article_content .text{margin-bottom:50px;}
+
+#check_commends{font-size:20px;margin-top:80px;margin-right:20px;display:inline;cursor:pointer;}
+#add_commend{font-size:20px;margin-top:80px;color:#ff611c;cursor:pointer;}
+
+#commend_area{margin-top:;}
+.commend{border-top:1px solid #aaaaaa;margin-top:10px;position:relative;}
+.commend .touxiang{border-radius:50%;width:75px;height:75px;float:left;margin:10px;}
+.commend .name{font-size:18px;font-weight:bold;float:left;margin-top:30px;margin-left:20px;}
+.say{width:80%;float:left;margin-left:10px;font-size:15px;position:relative;}
+.say p{clear:both;font-size:15px;margin-left:20px;}
+.commend_for_commend{position:absolute;right:20px;cursor:pointer;}
+.commends{position:absolute;right:120px;cursor:pointer;}
+
+.commend_for_commend_area{background-color:white;font-size:20px;margin-top:20px;border:1px solid #ff611c;display:none;padding:5px;}
+.commend_for_commend_area .yourname{display:inline;margin-right:10px;}
+.commend_for_commend_area .touxiang{margin-right:10px;}
+.commend_for_commend_area .choose_touxiang{border-radius:50%;width:75px;height:75px;float:left;margin:10px;border:5px solid white;}
+.commend_for_commend_area .touxiang_hover{border-radius:50%;width:75px;height:75px;float:left;margin:10px;border:5px solid #ff611c;}
+.commend_for_commend_area input{height:25px;font-size:15px;}
+.commend_for_commend_area .touxiang_radio{display:none;}
+.text{margin-top:50px;}
+.commend_for_commend_area textarea{margin-top:20px;font-size:15px;}
+.commend_for_commend_area button{background-color:#ff611c;color:white;font-size:20px;width:100px;border-radius:5px;padding:5px;margin-top:5px;}
+
+#add_commend_area{font-size:20px;margin-top:20px;}
+#add_commend_area .yourname{display:inline;margin-right:10px;}
+#add_commend_area .youremail{display:inline;margin-top:15px;margin-right:10px;}
+#add_commend_area .touxiang{margin-right:10px;}
+#add_commend_area .choose_touxiang{border-radius:50%;width:75px;height:75px;float:left;margin:10px;border:5px solid white;}
+#add_commend_area .touxiang_hover{border-radius:50%;width:75px;height:75px;float:left;margin:10px;border:5px solid #ff611c;}
+#add_commend_area input{height:25px;font-size:15px;}
+.touxiang_radio{display:none;}
+.text{margin-top:50px;}
+#add_commend_area textarea{margin-top:20px;font-size:15px;}
+#add_commend_area button{background-color:#ff611c;color:white;font-size:20px;width:100px;border-radius:5px;padding:5px;margin-top:5px;}
+
+.commends_for_thiscommend{display:none;}
+.commends_for_thiscommend .commend{border:none;/*1px solid #ff611c*/;background-color:#e4e3e3;}
+.commend_onclick{border-top:1px solid #aaaaaa;margin-top:10px;position:relative;background-color:white!important;}
