@@ -1,5 +1,5 @@
 <?php
-//输出分类列表
+//杈撳嚭鍒嗙被鍒楄〃
 include('conn.php');
 function cate_list(){
 $db=connect();
@@ -10,7 +10,7 @@ if(!$result){
   exit;
 }
 echo "<ul>";
-echo "<li><a href='index.php'>所有漫评</a></li>";
+echo "<li><a href='index.php'>脣霉脫脨脗镁脝脌</a></li>";
 $num_result=$result->num_rows;
 for($i=0;$i<$num_result;$i++){
   $row=$result->fetch_assoc();
